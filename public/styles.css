@@ -5,8 +5,7 @@ body {
 }
 
 .heading {
-  background-image: url("./images/pattern-bg.png");
-  background-position: center;
+  background-image: url("/images/pattern-bg.png");
   margin: 0;
   padding: 2rem 5rem 8rem 5rem;
   text-align: center;

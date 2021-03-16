@@ -25,7 +25,6 @@ function App() {
 
     http
       .get(url, function (response) {
-        var str = "";
         response.on("data", function (data) {
           const addressData = JSON.parse(data);
           setAdress({
@@ -40,13 +39,6 @@ function App() {
             addressData.location.lng
           ]);
         });
-
-        // response.on("data", function (chunk) {
-        //   str += chunk;
-        // });
-        // response.on("end", function () {
-        //   console.log(str);
-        // });
       })
       .end();
   }
@@ -55,13 +47,6 @@ function App() {
     setIp(newInput);
     getAdress(newInput);
   }
-
-  // console.log("coordinates " + latLng);
-  // const submitButton = document.querySelector(".submitButton");
-  // submitButton.addEventListener("click", function (event) {
-  //   console.log(event);
-
-  // });
 
   return (
     <div>
@@ -80,4 +65,3 @@ function App() {
 }
 
 export default App;
-// export { latLng };
